@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Paakyat na lumulutang na </> */
+@keyframes float-up {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.35;
+  }
+  90% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.code-float {
+  position: absolute;
+  bottom: -10%;
+  font-family: monospace;
+  color: #8b5cf6;
+  animation-name: float-up;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Pagpapalit-palit ng kulay: blue -> green -> red -> violet */
+@keyframes color-cycle {
+  0%,
+  100% {
+    color: #3b82f6;
+  }
+  25% {
+    color: #22c55e;
+  }
+  50% {
+    color: #ef4444;
+  }
+  75% {
+    color: #8b5cf6;
+  }
+}
+
+.animate-color-cycle {
+  animation: color-cycle 8s linear infinite;
+}
+
+@keyframes fill-bar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress);
+  }
+}
+
+.progress-fill {
+  animation: fill-bar 1.5s ease-out forwards;
+}
