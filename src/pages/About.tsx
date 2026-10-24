@@ -58,8 +58,7 @@ export default function About() {
           <div className={cardClass}>
             <h2 className="mb-2 text-xl font-semibold">My Goals</h2>
             <p className="text-gray-300">
-              I want to be a Software Engineer and develop and be the founder of
-              my own Applications.
+              I want to be a Software Engineer.
             </p>
           </div>
 
